@@ -15,9 +15,7 @@ public class Portero extends Futbolista {
 	
 	@Override
 	public String toString() {
-		
-		String txt = "El futbolista " + getNombre() +" tiene " + getEdad() + ", y juega de "  + getPosicion() +  " con el dorsal "+ dorsal + ". Le han marcado "+ golesRecibidos;
-		
+		String txt = "El futbolista " + getNombre() +" tiene " + getEdad() + ", y juega de "  + getPosicion() +  " con el dorsal "+ this.dorsal + ". Le han marcado "+ this.golesRecibidos;
 		return txt;
 	}
 	public Boolean jugarConLasManos() {
@@ -35,11 +33,10 @@ public class Portero extends Futbolista {
 	public void setDorsal(byte dorsal) {
 		this.dorsal = dorsal;
 	}
-
     @Override
-    public int compareTo(Futbolista o) {
-		Portero p = (Portero) o;
-		int dif = this.golesRecibidos - p.golesRecibidos;
-		return Math.abs(dif);
+    public int compareTo(Object o) {
+        if(this.golesRecibidos == ((Portero) o).golesRecibidos){return 0;}
+        else if (this.golesRecibidos> ((Portero) o).golesRecibidos){return this.golesRecibidos - ((Portero) o).golesRecibidos;}
+        else {return ((Portero) o).golesRecibidos - this.golesRecibidos;}
     }
 }

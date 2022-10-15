@@ -125,6 +125,8 @@ public class TestFutbolista {
 		assertTrue(ok, "Hay un problema en el metodo equals de la clase Futbolista");
     }
 	
+	public abstract int compareTo(Object o);
+
 	@Test
    	public void testJugarManos(){
 		Futbolista f = new Futbolista() {
