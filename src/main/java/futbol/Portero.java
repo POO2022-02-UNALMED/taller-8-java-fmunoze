@@ -18,7 +18,7 @@ public class Portero extends Futbolista {
 		String txt = "El futbolista " + getNombre() +" tiene " + getEdad() + ", y juega de "  + getPosicion() +  " con el dorsal "+ this.dorsal + ". Le han marcado "+ this.golesRecibidos;
 		return txt;
 	}
-	public Boolean jugarConLasManos() {
+	public boolean jugarConLasManos() {
 		return true;
 	}
 	public short getGolesRecibidos() {

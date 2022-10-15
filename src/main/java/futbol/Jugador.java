@@ -24,7 +24,7 @@ public class Jugador extends Futbolista {
 		return txt;
 	}
 	@Override
-	public Boolean jugarConLasManos() {
+	public boolean jugarConLasManos() {
 		return false;
 	}
 	public short getGolesMarcados() {

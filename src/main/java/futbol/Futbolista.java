@@ -22,7 +22,8 @@ public abstract class Futbolista implements Comparable<Object>{
     public boolean equals(Object obj) {
         return super.equals(obj);
     }
-    public abstract Boolean jugarConLasManos();
+    public abstract boolean jugarConLasManos();
+    public abstract int compareTo(Object o);
 
     public String getNombre() {
         return nombre;
